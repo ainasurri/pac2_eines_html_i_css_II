@@ -63,6 +63,7 @@ h1 {
   &__logo {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 
     &__img {
       width: 2rem;
@@ -87,7 +88,6 @@ h1 {
       display: flex;
       flex-direction: column;
       align-items: center;
-
 
       &__li {
         margin-top: 0.8rem;
@@ -120,7 +120,7 @@ h1 {
   &__logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     &__img {
@@ -172,13 +172,12 @@ h1 {
     #WRAP GENERIC
 \*---------------------------------*/
 
+
 .wrap {
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 0.5rem;
   grid-gap: 0.5rem;
-
-
 
   &__data {
     grid-column: 1/2;
@@ -267,6 +266,66 @@ h1 {
     }
   }
 }
+
+// @supports (display: grid) {
+//   .wrap {
+//     display: flex;      
+//     flex-direction: column;
+//     max-width: 80%;
+
+//     &__data {
+//       margin-top: 4rem;
+//       margin-left: 55rem;
+//       border-top: 1.5rem solid $blau;
+//       border-bottom: 2.5rem solid $blau;
+
+//       &__p {
+//         font-size: 2.5rem;
+//       }  
+//     }
+
+//     &__text {
+
+//       &::before {
+//         top: 0;
+//         left: 40%;
+//         right: 40%;
+//         padding-right: 100%;
+//       }
+
+//       &__p {
+//         font-size: 120%;
+//         margin-left: 30%;
+//         margin-right: 30%;
+//       }
+//     }
+
+//     &__welcome {
+//       margin: 0;
+//       text-align: left;
+
+//     }
+
+//     &__tennis {
+//       margin: 0;
+//       text-align: left;      
+
+//     }
+
+//     &__bola {
+//       display: flex;
+//       align-items: left;
+//     }
+
+//     &__join {
+//       justify-content: flex-start;      
+
+//       &__a {
+//         font-size: 3rem;
+//       }
+//     }
+//   }
+// }
 
 /*---------------------------------*\
     #PARTICIPANTS GENERIC
@@ -450,6 +509,20 @@ h1 {
   }
 }
 
+/*---------------------------------*\
+    #HELP GENERIC
+  \*---------------------------------*/
+
+  .help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.carousel {
+  width: 90%;
+}
+
+
 /*------------------------------------------------------*\
   #MOBIL
 \*------------------------------------------------------*/
@@ -544,6 +617,7 @@ h1 {
   /*---------------------------------*\
     #WRAP TABLET
   \*---------------------------------*/
+
   .wrap {
     &__data {
 
@@ -574,10 +648,68 @@ h1 {
         font-size: 1.2rem;
         margin-left: 2rem;
       }
-
     }
-
   }
+
+  // @supports (display: grid) {
+  //   .wrap {
+  //     display: flex;      
+  //     flex-direction: column;
+  //     max-width: 80%;
+
+  //     &__data {
+  //       margin-top: 4rem;
+  //       margin-left: 55rem;
+  //       border-top: 1.5rem solid $blau;
+  //       border-bottom: 2.5rem solid $blau;
+
+  //       &__p {
+  //         font-size: 2.5rem;
+  //       }  
+  //     }
+
+  //     &__text {
+
+  //       &::before {
+  //         top: 0;
+  //         left: 40%;
+  //         right: 40%;
+  //         padding-right: 100%;
+  //       }
+
+  //       &__p {
+  //         font-size: 120%;
+  //         margin-left: 30%;
+  //         margin-right: 30%;
+  //       }
+  //     }
+
+  //     &__welcome {
+  //       margin: 0;
+  //       text-align: left;
+
+  //     }
+
+  //     &__tennis {
+  //       margin: 0;
+  //       text-align: left;      
+
+  //     }
+
+  //     &__bola {
+  //       display: flex;
+  //       align-items: left;
+  //     }
+
+  //     &__join {
+  //       justify-content: flex-start;      
+
+  //       &__a {
+  //         font-size: 3rem;
+  //       }
+  //     }
+  //   }
+  // }
 
   /*---------------------------------*\
     #PARTICIPANTS TABLET
@@ -604,6 +736,7 @@ h1 {
         }
 
         &__dades {
+
           &__ul {
 
             &__li {
@@ -613,16 +746,18 @@ h1 {
                 margin-top: 1rem;
 
               }
-
             }
           }
         }
-
-
       }
     }
+  }
 
-
+  /*---------------------------------*\
+    #HELP TABLET
+  \*---------------------------------*/
+  .carousel {
+    width: 80%;
   }
 
 }
@@ -713,6 +848,7 @@ h1 {
   /*---------------------------------*\
     #WRAP DESKTOP
   \*---------------------------------*/
+
   .wrap {
     transform: rotate(-25deg);
     grid-template-columns: 1fr 2fr 2fr;
@@ -782,13 +918,72 @@ h1 {
     }
   }
 
+  // @supports (display: grid) {
+  //   .wrap {
+  //     display: flex;
+  //     flex-direction: column;
+  //     max-width: 80%;
+
+  //     &__data {
+  //       margin-top: 4rem;
+  //       margin-left: 55rem;
+  //       border-top: 1.5rem solid $blau;
+  //       border-bottom: 2.5rem solid $blau;
+
+  //       &__p {
+  //         font-size: 2.5rem;
+  //       }
+  //     }
+
+  //     &__text {
+
+  //       &::before {
+  //         top: 0;
+  //         left: 40%;
+  //         right: 40%;
+  //         padding-right: 100%;
+  //       }
+
+  //       &__p {
+  //         font-size: 120%;
+  //         margin-left: 30%;
+  //         margin-right: 30%;
+  //       }
+  //     }
+
+  //     &__welcome {
+  //       margin: 0;
+  //       text-align: left;
+
+  //     }
+
+  //     &__tennis {
+  //       margin: 0;
+  //       text-align: left;
+
+  //     }
+
+  //     &__bola {
+  //       display: flex;
+  //       align-items: left;
+  //     }
+
+  //     &__join {
+  //       justify-content: flex-start;
+
+  //       &__a {
+  //         font-size: 3rem;
+  //       }
+  //     }
+  //   }
+  // }
+
   /*--------------- ------------------*\
     #PARTICIPANTS DESKTOP
-    \*---------------------------------*/
+  \*---------------------------------*/
 
   .participants {
     display: flex;
-
 
     &__h1 {
       margin-top: 4rem;
@@ -809,7 +1004,6 @@ h1 {
       &__each {
         flex-direction: column;
         width: 25%;
-
         margin-left: 3rem;
         margin-right: 3rem;
 
@@ -827,7 +1021,6 @@ h1 {
               margin-top: 0.5rem;
 
               &:last-child {
-
                 margin-top: 1rem;
 
               }
@@ -836,13 +1029,11 @@ h1 {
         }
       }
     }
-
-
   }
 
   /*--------------- ------------------*\
     #ARTICLE DESKTOP
-    \*---------------------------------*/
+  \*---------------------------------*/
 
 
 
@@ -865,4 +1056,18 @@ h1 {
     }
 
   }
+
+  /*--------------- ------------------*\
+    #HELP DESKTOP
+  \*---------------------------------*/
+
+  .carousel {
+    width: 50%;
+  }
+
+  .accordion {
+    width: 70%;
+  }
+
+
 }
