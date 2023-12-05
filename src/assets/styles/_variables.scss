@@ -11,10 +11,28 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
-
+/*Color variables*/
 $blau:     #02055D;
 $salmo:    #FF6752;
 $gris:     #F7F7F7;
 $grisfosc: #D3D3D3;
 $blanc:    #FFFFFF;
 $negre:    #000000;
+
+/*Collapse*/
+$transition-collapse:         height 1.35s ease;
+
+
+/*Carousel*/
+$carousel-transition-duration:       .9s;
+
+/*Accordion*/
+$accordion-button-active-bg:              $grisfosc;
+$accordion-border-color:  $blau;
+$accordion-button-focus-border-color: $blau;
+$accordion-icon-active-color:     $blau;
+$accordion-button-active-color: $blau; 
+$accordion-button-color:  $blau;
+
+/*Cards*/
+$card-border-color: $blau;

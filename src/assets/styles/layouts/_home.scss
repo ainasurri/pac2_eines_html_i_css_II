@@ -49,6 +49,8 @@ h1 {
 
 }
 
+
+
 /*---------------------------------*\
     #NAVEGADOR GENERIC
 \*---------------------------------*/
@@ -88,6 +90,7 @@ h1 {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-left: 0rem;
 
       &__li {
         margin-top: 0.8rem;
@@ -148,6 +151,8 @@ h1 {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      padding-left: 0rem;
 
 
       &__li {
@@ -178,6 +183,7 @@ h1 {
   grid-template-columns: 2fr 1fr;
   margin: 0.5rem;
   grid-gap: 0.5rem;
+  
 
   &__data {
     grid-column: 1/2;
@@ -510,17 +516,92 @@ h1 {
 }
 
 /*---------------------------------*\
-    #HELP GENERIC
-  \*---------------------------------*/
+    #ACTIVITIES GENERIC
+\*---------------------------------*/
 
-  .help{
+  .act{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__carousel {
+      width: 90%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__coaches{
+      align-items: center;
+      width: 80%;
+      &__h2{
+        color: $blau;
+        text-align: center;
+      }
+      &__p{
+        color: $blau;
+        text-align: justify;
+      }
+
+      &__cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__card{
+          margin-bottom: 1rem;
+          &__title{
+            color: $salmo;
+          }
+          &__text{
+            color: $blau;
+          }
+          
+        }
+      }
+    }
+    &__game{
+      align-items: center;
+      width: 80%;
+      margin-top: 2rem;
+      
+
+      &__h2{
+        color: $blau;
+        text-align: center;
+      }
+      &__questions{
+        border-bottom: 0.15rem solid $salmo;
+        margin-bottom: 0.5rem;
+        &__p{
+          color: $blau;
+          text-align: justify;
+        }
+      }
+    }
+    &__accordion{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 80%;
+      align-items: center;
+
+      &__h2{
+        color: $blau;
+        text-align: center;
+      }
+    }
+    
   }
-.carousel {
-  width: 90%;
-}
+
+  .accordion-body{
+    color: $blau;
+  }
+
+
+  .btn{
+    color: #f7f7f7;
+    background-color: $blau;
+    border: none;
+  }
+ 
 
 
 /*------------------------------------------------------*\
@@ -754,10 +835,20 @@ h1 {
   }
 
   /*---------------------------------*\
-    #HELP TABLET
+    #ACTIVITATS DESKTOP
   \*---------------------------------*/
-  .carousel {
-    width: 80%;
+  .act{
+    &__coaches{
+      &__cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__card{
+          width: 40%;
+        }
+      }
+    }
   }
 
 }
@@ -783,6 +874,7 @@ h1 {
 
       &__ul {
         flex-direction: row;
+        
 
 
         &__li {
@@ -1058,7 +1150,7 @@ h1 {
   }
 
   /*--------------- ------------------*\
-    #HELP DESKTOP
+    #ACTIVITATS DESKTOP
   \*---------------------------------*/
 
   .carousel {
@@ -1069,5 +1161,17 @@ h1 {
     width: 70%;
   }
 
-
+ 
+  .act{
+    &__coaches{
+      &__cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+       &__card{
+        margin: 1rem;
+       }       
+      }
+    }
+  }
 }
