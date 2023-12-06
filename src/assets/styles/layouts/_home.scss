@@ -179,101 +179,191 @@ h1 {
 /*---------------------------------*\
     #POSTER GENERIC
 \*---------------------------------*/
-
-
-.wrap {
-  display:               grid;
-  grid-template-columns: 2fr 1fr;
-  margin:   5%;
-  grid-gap: 0.5%;
-  margin-bottom: 2rem;
-
-
-  &__data {
-    grid-column:   1/2;
-    border-top:    0.5rem solid $blau;
-    border-bottom: 1rem solid $blau;
-
-    &__p {
-      font-size:  120%;
-      text-align: right;
-      color:      $blau;
-    }
-  }
-
-  &__bola {
-    display:     flex;
-    align-items: center;
-    grid-row:    3;
-    grid-column: 1;
- 
-
-    &__svg {
-      margin:    auto;
-      max-width: 100%;
-    }
-  }
-
-  &__welcome {
-    grid-column: 2;
-    grid-row:    2;
-    color:       $blau;
-    text-align:  right;
-    font-size:   300%;
-  }
-
-  &__tennis {
-    grid-column: 1/ span 2;
-    grid-row:    3;
-    color:       $blau;
-    text-align:  right;
-    font-size:   300%;
-  }
-
-  &__text {
-    grid-row:        5;
-    height:          32rem;
-    display:         flex;
-    flex-direction:  column;
-    justify-content: center;
-    position:        relative;
-
-    &__p {
-      text-align: justify;
-      color:      $blau;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0 10%;
-      background-color: $salmo;
-      z-index:  -1;
-    }
-  }
-
-  &__join {
-    grid-row:        5;
-    display:         flex;
-    align-items:     center;
-    justify-content: center;
-
-    &__a {
-      text-transform:  uppercase;
-      font-weight:     bolder;
-      text-decoration: none;
-      transform:       rotate(90deg);
-      color:           $blau;
-      font-size:       2rem;
-      text-align:      center;
-
-      &:hover {
-        color:            $salmo;
-        background-color: $blau;
+@supports (display: grid){
+  .wrap {
+    display:               grid;
+    grid-template-columns: 2fr 1fr;
+    margin:                5%;
+    grid-gap:              0.5%;
+    margin-bottom:         2rem;
+  
+  
+    &__data {
+      grid-column:   1/2;
+      border-top:    0.5rem solid $blau;
+      border-bottom: 1rem solid $blau;
+  
+      &__p {
+        font-size:  120%;
+        text-align: right;
+        color:      $blau;
       }
     }
-  }
+  
+    &__bola {
+      display:     flex;
+      align-items: center;
+      grid-row:    3;
+      grid-column: 1;
+   
+  
+      &__svg {
+        margin:    auto;
+        max-width: 100%;
+      }
+    }
+  
+    &__welcome {
+      grid-column: 2;
+      grid-row:    2;
+      color:       $blau;
+      text-align:  right;
+      font-size:   300%;
+    }
+  
+    &__tennis {
+      grid-column: 1/ span 2;
+      grid-row:    3;
+      color:       $blau;
+      text-align:  right;
+      font-size:   300%;
+    }
+  
+    &__text {
+      grid-row:        5;
+      height:          32rem;
+      display:         flex;
+      flex-direction:  column;
+      justify-content: center;
+      position:        relative;
+  
+      &__p {
+        text-align: justify;
+        color:      $blau;
+      }
+  
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0 10%;
+        background-color: $salmo;
+        z-index:  -1;
+      }
+    }
+  
+    &__join {
+      grid-row:        5;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+  
+      &__a {
+        text-transform:  uppercase;
+        font-weight:     bolder;
+        text-decoration: none;
+        transform:       rotate(90deg);
+        color:           $blau;
+        font-size:       2rem;
+        text-align:      center;
+  
+        &:hover {
+          color:            $salmo;
+          background-color: $blau;
+        }
+      }
+    }
+  }  
 }
+
+@supports not (display: grid){
+  .wrap {
+    display:         flex;
+    margin:          5%;
+    flex-wrap:       wrap;
+    justify-content: space-around;
+    margin-bottom:   2rem;
+  
+  
+    &__data {      
+      border-top:    0.5rem solid $blau;
+      border-bottom: 1rem solid $blau;
+      width: 80%;
+  
+      &__p {
+        font-size:  120%;
+        color:      $blau;
+      }
+    }
+  
+    &__bola {
+      display:     flex;
+      align-items: center;    
+   
+  
+      &__svg {
+        margin:    auto;
+        max-width: 100%;
+      }
+    }
+  
+    &__welcome {      
+      color:       $blau;
+      text-align:  right;
+      font-size:   200%;
+    }
+  
+    &__tennis {
+      
+      color:       $blau;
+      text-align:  right;
+      font-size:   250%;
+      
+    }
+  
+    &__text {          
+      display:         flex;
+      flex-direction:  column;
+      justify-content: center;
+      position:        relative;
+  
+      &__p {
+        text-align: justify;
+        color:      $blau; 
+        width:      40%;
+      }
+  
+      &::before {
+        content: '';
+        position:         absolute;
+        inset:            0 20%;
+        background-color: $salmo;
+        z-index:          -1;
+      }
+    }
+  
+    &__join {
+      
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+  
+      &__a {
+        text-transform:  uppercase;
+        font-weight:     bolder;
+        text-decoration: none;
+        color:           $blau;
+        font-size:       2rem;
+        text-align:      center;
+  
+        &:hover {
+          color:            $salmo;
+          background-color: $blau;
+        }
+      }
+    }
+  } 
+}
+
 
 
 /*---------------------------------*\
@@ -664,40 +754,79 @@ h1 {
   /*---------------------------------*\
     #POSTER TABLET
   \*---------------------------------*/
+  @supports (display: grid){
 
-  .wrap {
+    .wrap {
 
-    &__data {
-
-      &__p {
-        font-size: 2rem;
+      &__data {
+  
+        &__p {
+          font-size: 2rem;
+        }
       }
-    }
-
-    &__welcome {
-      font-size:    3.5rem;
-      margin-right: 10rem;
-    }
-
-    &__tennis {
-      font-size:  5rem;
-      text-align: center;
-    }
-
-    &__text {
-
-      &::before {
-        top:   0;
-        left:  20%;
-        right: 20%;
+  
+      &__welcome {
+        font-size:    3.5rem;
+        margin-right: 10rem;
       }
-
-      &__p {
-        font-size:   1.2rem;
-        margin-left: 2rem;
+  
+      &__tennis {
+        font-size:  5rem;
+        text-align: center;
+      }
+  
+      &__text {
+  
+        &::before {
+          top:   0;
+          left:  20%;
+          right: 20%;
+        }
+  
+        &__p {
+          font-size:   1.2rem;
+          margin-left: 2rem;
+        }
       }
     }
   }
+  @supports not (display: grid){
+
+    .wrap {
+
+      &__data {
+  
+        &__p {
+          font-size: 2rem;
+        }
+      }
+  
+      &__welcome {
+        font-size:    3.5rem;
+        margin-right: 10rem;
+      }
+  
+      &__tennis {
+        font-size:  5rem;
+        text-align: center;
+      }
+  
+      &__text {
+  
+        &::before {
+          top:   0;
+          left:  20%;
+          right: 50%;
+        }
+  
+        &__p {
+          font-size:   1.2rem;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  
 
   /*---------------------------------*\
     #PARTICIPANTS TABLET
@@ -856,65 +985,124 @@ h1 {
     }
   }
  
- 
-  .wrap {
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top:            0;
-    transform:             rotate(-15deg);
-
-    &__bola {
-
-      &__svg {
-        margin:    0;
-        transform: scale(.5);
+  @supports (display: grid){
+    .wrap {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top:            0;
+      transform:             rotate(-15deg);
+  
+      &__bola {
+  
+        &__svg {
+          margin:    0;
+          transform: scale(.5);
+        }
       }
-    }
-
-    &__welcome {
-      font-size:   300%;
-      text-align:  left;
-      grid-column: 1/ span 2;
-      grid-row:    2;
-      margin-left: 2rem;
-    }
-
-    &__tennis {
-      font-size:   400%;
-      text-align:  left;
-      grid-column: 1/ span 2;
-      grid-row:    3;
-
-    }
-
-    &__text {
-      grid-row:    3;
-      grid-column: 2;
-      font-size:   85%;
-
-      &::before {
-        top:           0;
-        left:          60%;
-        right:         60%;
-        padding-right: 100%;
+  
+      &__welcome {
+        font-size:   300%;
+        text-align:  left;
+        grid-column: 1/ span 2;
+        grid-row:    2;
+        margin-left: 2rem;
       }
-
-      &__p {
-        font-size:   120%;
-        margin-left: 50%;
-        margin-top:  20%;
+  
+      &__tennis {
+        font-size:   400%;
+        text-align:  left;
+        grid-column: 1/ span 2;
+        grid-row:    3;
+  
       }
-    }
-
-    &__join {
-      justify-content: flex-start;
-      grid-row:        3;
-      grid-column:     3;
-
-      &__a {
-        font-size: 300%;
+  
+      &__text {
+        grid-row:    3;
+        grid-column: 2;
+        font-size:   85%;
+  
+        &::before {
+          top:           0;
+          left:          60%;
+          right:         60%;
+          padding-right: 100%;
+        }
+  
+        &__p {
+          font-size:   120%;
+          margin-left: 50%;
+          margin-top:  20%;
+        }
+      }
+  
+      &__join {
+        justify-content: flex-start;
+        grid-row:        3;
+        grid-column:     3;
+  
+        &__a {
+          font-size: 300%;
+        }
       }
     }
   }
+  @supports not (display: grid){
+    .wrap {
+      margin-top:            0;      
+      
+      &__data{
+        margin-top: 3rem;
+      }
+      &__bola {
+  
+        &__svg {
+          margin:    0;
+          transform: scale(.6);
+          
+        }
+      }
+  
+      &__welcome {
+        font-size:   400%;
+        text-align:  left;        
+        width: 50%;
+        align-self: flex-end;
+      }
+  
+      &__tennis {
+        font-size:   500%;
+        text-align:  left;
+  
+      }
+  
+      &__text {
+        font-size:   85%;
+        
+  
+        &::before {
+          top:           50;
+          left:          20%;
+          right:         80%;
+          padding-right: 100%;
+        }
+  
+        &__p {
+          font-size:   120%;
+          margin-left: 50%;
+          margin-top:  20%;
+        }
+      }
+  
+      &__join {
+        justify-content: flex-start;       
+  
+        &__a {
+          font-size: 300%;
+        }
+      }
+    }
+  }
+
+  
 
   /*---------------------------------*\
     #PARTICIPANTS DESKTOP
