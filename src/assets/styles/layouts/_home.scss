@@ -374,7 +374,7 @@ h1 {
     width:          80%;
 
     &__blockquote {
-      background-color: $grisfosc;
+      background-color: darken($gris, 10);
       font-size: 1.2rem;
       font-style: italic;
       text-align: center;
@@ -473,8 +473,8 @@ h1 {
 
   &__carousel {
     width:         90%;
-    margin-top:    1rem;
-    margin-bottom: 1rem;
+    margin-top:    2dvw;
+    margin-bottom: 2dvw;
   }
 
   &__coaches {
@@ -497,7 +497,7 @@ h1 {
       align-items:    center;
 
       &__card {
-        margin-bottom: 1rem;
+        margin-bottom: 5dvw;
 
         &__title {
           color: hwb(9 38% 0%);
@@ -514,16 +514,17 @@ h1 {
   &__game {
     align-items: center;
     width:       80%;
-    margin-top:  2rem;
+    margin-top:  8dvw;
 
     &__h2 {
       color:      hwb(244 2% 61%);
       text-align: center;
+      margin-bottom: 3dvw;
     }
 
     &__questions {      
-      margin-bottom: 0.5rem;
-      border-bottom: 0.15rem solid hwb(9 38% 0%);
+      margin-bottom: 4dvw;
+      border-bottom: 0.2dvw solid hwb(9 38% 0%);
 
       &__p {
         color:      hwb(244 2% 61%);
@@ -538,14 +539,15 @@ h1 {
   }
 
   &__accordion {
-    margin-top:    2rem;
-    margin-bottom: 2rem;
+    margin-top:    4dvw;
+    margin-bottom: 4dvw;
     width:         80%;
     align-items:   center;
 
     &__h2 {
       color:      hwb(244 2% 61%);
       text-align: center;
+      margin-bottom: 3dvw;
     }
 
     &__item{
@@ -982,6 +984,11 @@ h1 {
         &__card {
           margin: 1rem;
         }
+      }
+    }
+    &__game{
+      &__questions{
+        border-bottom: 0.1dvw solid hwb(9 38% 0%);
       }
     }
   }
