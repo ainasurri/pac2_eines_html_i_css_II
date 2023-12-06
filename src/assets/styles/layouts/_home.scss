@@ -181,9 +181,10 @@ h1 {
 .wrap {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 0.5rem;
-  grid-gap: 0.5rem;
-  
+  margin: 5%;
+  grid-gap: 0.5%;
+  margin-bottom: 2rem;
+
 
   &__data {
     grid-column: 1/2;
@@ -191,7 +192,7 @@ h1 {
     border-bottom: 1rem solid $blau;
 
     &__p {
-      font-size: 1.2rem;
+      font-size: 120%;
       text-align: right;
       color: $blau;
     }
@@ -272,6 +273,8 @@ h1 {
     }
   }
 }
+
+
 
 // @supports (display: grid) {
 //   .wrap {
@@ -519,89 +522,98 @@ h1 {
     #ACTIVITIES GENERIC
 \*---------------------------------*/
 
-  .act{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.act {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    &__carousel {
-      width: 90%;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+  &__carousel {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__coaches {
+    align-items: center;
+    width: 80%;
+
+    &__h2 {
+      color: $blau;
+      text-align: center;
     }
 
-    &__coaches{
+    &__p {
+      color: $blau;
+      text-align: justify;
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      width: 80%;
-      &__h2{
-        color: $blau;
-        text-align: center;
+
+      &__card {
+        margin-bottom: 1rem;
+
+        &__title {
+          color: $salmo;
+        }
+
+        &__text {
+          color: $blau;
+        }
+
       }
-      &__p{
+    }
+  }
+
+  &__game {
+    align-items: center;
+    width: 80%;
+    margin-top: 2rem;
+
+
+    &__h2 {
+      color: $blau;
+      text-align: center;
+    }
+
+    &__questions {
+      border-bottom: 0.15rem solid $salmo;
+      margin-bottom: 0.5rem;
+
+      &__p {
         color: $blau;
         text-align: justify;
       }
-
-      &__cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__card{
-          margin-bottom: 1rem;
-          &__title{
-            color: $salmo;
-          }
-          &__text{
-            color: $blau;
-          }
-          
-        }
-      }
     }
-    &__game{
-      align-items: center;
-      width: 80%;
-      margin-top: 2rem;
-      
-
-      &__h2{
-        color: $blau;
-        text-align: center;
-      }
-      &__questions{
-        border-bottom: 0.15rem solid $salmo;
-        margin-bottom: 0.5rem;
-        &__p{
-          color: $blau;
-          text-align: justify;
-        }
-      }
-    }
-    &__accordion{
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      width: 80%;
-      align-items: center;
-
-      &__h2{
-        color: $blau;
-        text-align: center;
-      }
-    }
-    
   }
 
-  .accordion-body{
-    color: $blau;
+  &__accordion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    align-items: center;
+
+    &__h2 {
+      color: $blau;
+      text-align: center;
+    }
   }
 
+}
 
-  .btn{
-    color: #f7f7f7;
-    background-color: $blau;
-    border: none;
-  }
- 
+.accordion-body {
+  color: $blau;
+}
+
+
+.btn {
+  color: #f7f7f7;
+  background-color: $blau;
+  border: none;
+}
+
 
 
 /*------------------------------------------------------*\
@@ -837,14 +849,15 @@ h1 {
   /*---------------------------------*\
     #ACTIVITATS DESKTOP
   \*---------------------------------*/
-  .act{
-    &__coaches{
-      &__cards{
+  .act {
+    &__coaches {
+      &__cards {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        &__card{
+
+        &__card {
           width: 40%;
         }
       }
@@ -874,7 +887,7 @@ h1 {
 
       &__ul {
         flex-direction: row;
-        
+
 
 
         &__li {
@@ -940,135 +953,150 @@ h1 {
   /*---------------------------------*\
     #WRAP DESKTOP
   \*---------------------------------*/
+  .containerwrap {
+  //   padding: 25rem;
+    overflow: hidden;
+  }
 
   .wrap {
-    transform: rotate(-25deg);
-    grid-template-columns: 1fr 2fr 2fr;
-    max-width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5% 5% 1rem;
+    transform: rotate(-15deg);
+    &__bola {
 
-    &__data {
-      margin-top: 4rem;
-      margin-left: 55rem;
-      border-top: 1.5rem solid $blau;
-      border-bottom: 2.5rem solid $blau;
-      transform: rotate(90deg);
-
-      &__p {
-        font-size: 2.5rem;
+      &__svg {
+        margin: 0;
+        transform: scale(.5);
+      
       }
-
     }
+      &__welcome {
+    font-size: 300%;
+    text-align: left;
+    grid-column: 1/ span 2;
+    grid-row: 2;
+    margin-left: 2rem;
+  }
+
+  &__tennis {
+    font-size: 400%;
+    text-align: left;
+    grid-column: 1/ span 2;
+    grid-row: 3;
+    // margin-left: 13rem;
+  }
 
     &__text {
-      grid-row: 4;
+      grid-row: 3;
       grid-column: 2;
+      font-size: 85%;
 
       &::before {
         top: 0;
-        left: 40%;
-        right: 40%;
+        left: 60%;
+        right: 60%;
         padding-right: 100%;
       }
 
       &__p {
         font-size: 120%;
-        margin-left: 30%;
-        margin-right: 30%;
+        margin-left: 50%;
+        margin-top: 20%;
       }
-    }
-
-    &__welcome {
-      font-size: 4rem;
-      text-align: left;
-      grid-column: 1/ span 2;
-      grid-row: 3;
-      margin-left: 10rem;
-    }
-
-    &__tennis {
-      font-size: 5rem;
-      text-align: left;
-      grid-column: 1/ span 2;
-      grid-row: 4;
-      margin-left: 13rem;
-    }
-
-    &__bola {
-      grid-column: 1/ span 2;
-      grid-row: 4;
-      display: flex;
-      align-items: left;
     }
 
     &__join {
       justify-content: flex-start;
-      grid-row: 4;
+      grid-row: 3;
+      grid-column: 3;
 
       &__a {
-        font-size: 3rem;
+        font-size: 300%;
       }
     }
   }
 
-  // @supports (display: grid) {
-  //   .wrap {
-  //     display: flex;
-  //     flex-direction: column;
-  //     max-width: 80%;
 
-  //     &__data {
-  //       margin-top: 4rem;
-  //       margin-left: 55rem;
-  //       border-top: 1.5rem solid $blau;
-  //       border-bottom: 2.5rem solid $blau;
 
-  //       &__p {
-  //         font-size: 2.5rem;
-  //       }
-  //     }
+  // .wrap {
 
-  //     &__text {
+  // transform: rotate(-25deg);
+  // grid-template-columns: 1fr 2fr 2fr;
+  // margin: 0;
+  // width: 30%;
+  // height: 20%;
+  // position: absolute;
+  // top: -10rem;
+  // left: -10rem;
 
-  //       &::before {
-  //         top: 0;
-  //         left: 40%;
-  //         right: 40%;
-  //         padding-right: 100%;
-  //       }
 
-  //       &__p {
-  //         font-size: 120%;
-  //         margin-left: 30%;
-  //         margin-right: 30%;
-  //       }
-  //     }
 
-  //     &__welcome {
-  //       margin: 0;
-  //       text-align: left;
+  // &__data {
+  //   margin-top: 40%;
+  //   margin-left: 55rem;
+  //   border-top: 1.5rem solid $blau;
+  //   border-bottom: 2.5rem solid $blau;
+  //   transform: rotate(90deg);
 
-  //     }
+  //   &__p {
+  //     font-size: 250%;
+  //   }
 
-  //     &__tennis {
-  //       margin: 0;
-  //       text-align: left;
+  // }
 
-  //     }
+  // &__text {
+  //   grid-row: 4;
+  //   grid-column: 2;
+  //   font-size: 90%;
 
-  //     &__bola {
-  //       display: flex;
-  //       align-items: left;
-  //     }
+  //   &::before {
+  //     top: 0;
+  //     left: 40%;
+  //     right: 40%;
+  //     padding-right: 100%;
+  //   }
 
-  //     &__join {
-  //       justify-content: flex-start;
-
-  //       &__a {
-  //         font-size: 3rem;
-  //       }
-  //     }
+  //   &__p {
+  //     font-size: 120%;
+  //     margin-left: 30%;
+  //     margin-right: 30%;
   //   }
   // }
+
+  // &__welcome {
+  //   font-size: 300%;
+  //   text-align: left;
+  //   grid-column: 1/ span 2;
+  //   grid-row: 3;
+  //   margin-left: 2rem;
+  // }
+
+  // &__tennis {
+  //   font-size: 400%;
+  //   text-align: left;
+  //   grid-column: 1/ span 2;
+  //   grid-row: 4;
+  //   // margin-left: 13rem;
+  // }
+
+  // &__bola {
+  //   grid-column: 1/ span 2;
+  //   grid-row: 4;
+  //   display: flex;
+  //   align-items: left;
+  // }
+
+  // &__join {
+  //   justify-content: flex-start;
+  //   grid-row: 4;
+
+  //   &__a {
+  //     font-size: 300%;
+  //   }
+  // }
+  // }
+
+
 
   /*--------------- ------------------*\
     #PARTICIPANTS DESKTOP
@@ -1161,17 +1189,20 @@ h1 {
     width: 70%;
   }
 
- 
-  .act{
-    &__coaches{
-      &__cards{
+
+  .act {
+    &__coaches {
+      &__cards {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-       &__card{
-        margin: 1rem;
-       }       
+
+        &__card {
+          margin: 1rem;
+        }
       }
     }
   }
+
+
 }
