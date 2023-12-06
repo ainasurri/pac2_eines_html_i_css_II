@@ -1,36 +1,44 @@
 /**
  * CONTINGUT
  *
- * PRINCIPAL
  *  General..............Configuració general de les etiquetes
  *  Navegador............Estils pel navegador general
- *  Presentació..........Estils pels títols, imatge i paràgrafs 
- *  Blocs................Estils per definir les tres caixes amb els tipus de ioga.
- *  Footer...............Estils per al footer.
+ *  Footer...............Estils per al footer
+ *  Poster...............Estils per al pòster fet a l'index
+ *  Participants.........Estils per a al contingut de la pàgina participants
+ *  Article..............Estils per a al contingut de la pàgina article
+ *  Activitats...........Estils per a al contingut de la pàgina activitats
+ *  
  *
  * MÒBIL
- *  Navegador mòbil......Estils específics pel navegador del mòbil
+ *  Footer......Estils específics pel footer del mòbil
  *  
  * TABLET
- *  General..............Configuració per a tablet de les etiquetes generals
  *  Navegador............Estils específics pel navegador de la tablet
- *  Blocs................Estils específics per definir les tres caixes amb els tipus de ioga
- *  Presentació..........Estils pels títols, imatge i paràgrafs 
+ *  Footer...............Estils específics pel footer de la tablet
+ *  Poster...............Estils específics per al pòster de la tablet
+ *  Participants.........Estils específics per a al contingut de la pàgina participants de la tablet
+ *  Activitats...........Estils específics per a al contingut de la pàgina activitats de la tablet
+ *
  *
  * DESKTOP
- *  General..............Configuració per a tablet de les etiquetes generals
+
  *  Navegador............Estils específics pel navegador desktop
- *  Blocs................Estils específics per definir les tres caixes amb els tipus de ioga
- *  Presentació..........Estils pels títols, imatge i paràgrafs 
+ *  Footer...............Estils específics pel footer desktop
+ *  Poster...............Estils específics per al pòster desktop
+ *  Participants.........Estils específics per a al contingut de la pàgina participants desktop
+ *  Article..............Estils específics per a al contingut de la pàgina desktop
+ *  Activitats...........Estils específics per a al contingut de la pàgina activitats desktop
  *
  */
+
 
 /*------------------------------------*\
   #GENERAL
 \*------------------------------------*/
 
 * {
-  margin: 0;
+  margin:  0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -41,11 +49,10 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 h1 {
   color: $blau;
   text-align: right;
-  font-size: 300%;
+  font-size:  300%;
 
 }
 
@@ -55,26 +62,26 @@ h1 {
     #NAVEGADOR GENERIC
 \*---------------------------------*/
 .nav {
-  padding-top: 1.2rem;
+  padding-top:    1.2rem;
   padding-bottom: 1.2rem;
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  align-items:    center;
+  box-shadow:     0px 4px 8px rgba(0, 0, 0, 0.2);
 
   &__logo {
-    display: flex;
+    display:        flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items:    flex-start;
 
     &__img {
-      width: 2rem;
+      width:        2rem;
       margin-right: 0.6rem;
     }
 
     &__p {
-      font-size: 150%;
-      color: $blau;
+      font-size:   150%;
+      color:       $blau;
       font-weight: bold;
     }
 
@@ -86,15 +93,14 @@ h1 {
   &__pages {
 
     &__ul {
-      list-style: none;
-      display: flex;
+      display:        flex;
       flex-direction: column;
-      align-items: center;
-      padding-left: 0rem;
+      align-items:    center;
+      list-style:     none;
+      padding-left:   0rem;
 
       &__li {
         margin-top: 0.8rem;
-
 
         &__a {
           text-decoration: none;
@@ -113,50 +119,48 @@ h1 {
     #FOOTER GENERIC
 \*---------------------------------*/
 .footer {
-  padding-top: 1.2rem;
+  padding-top:    1.2rem;
   padding-bottom: 1.2rem;
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  align-items:    center;
+  box-shadow:     0px 4px 8px rgba(0, 0, 0, 0.2);
 
   &__logo {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display:         flex;
+    flex-direction:  row;
+    align-items:     flex-start;
     justify-content: center;
 
     &__img {
-      width: 8%;
-      height: auto;
+      width:        8%;
+      height:       auto;
       margin-right: 0.6rem;
     }
 
     &__p {
-      font-size: 120%;
-      color: $blau;
+      font-size:   120%;
+      color:       $blau;
       font-weight: bold;
     }
 
     &__a {
       text-decoration: none;
-
     }
   }
 
   &__pages {
 
     &__ul {
-      list-style: none;
-      display: flex;
+      list-style:     none;
+      display:        flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-left: 0rem;
-
+      align-items:    center;
+      text-align:     center;
+      padding-left:   0rem;
 
       &__li {
-        margin-top: 0.8rem;
+        margin-top:   0.8rem;
 
 
         &__a {
@@ -165,7 +169,6 @@ h1 {
 
           &:hover {
             color: $salmo;
-
           }
         }
       }
@@ -174,100 +177,101 @@ h1 {
 }
 
 /*---------------------------------*\
-    #WRAP GENERIC
+    #POSTER GENERIC
 \*---------------------------------*/
 
 
 .wrap {
-  display: grid;
+  display:               grid;
   grid-template-columns: 2fr 1fr;
-  margin: 5%;
+  margin:   5%;
   grid-gap: 0.5%;
   margin-bottom: 2rem;
 
 
   &__data {
-    grid-column: 1/2;
-    border-top: 0.5rem solid $blau;
+    grid-column:   1/2;
+    border-top:    0.5rem solid $blau;
     border-bottom: 1rem solid $blau;
 
     &__p {
-      font-size: 120%;
+      font-size:  120%;
       text-align: right;
-      color: $blau;
+      color:      $blau;
     }
   }
 
   &__bola {
-    grid-row: 3;
-    grid-column: 1;
-    display: flex;
+    display:     flex;
     align-items: center;
+    grid-row:    3;
+    grid-column: 1;
+ 
 
     &__svg {
-      margin: auto;
+      margin:    auto;
       max-width: 100%;
     }
   }
 
   &__welcome {
     grid-column: 2;
-    grid-row: 2;
-    color: $blau;
-    text-align: right;
-    font-size: 300%;
+    grid-row:    2;
+    color:       $blau;
+    text-align:  right;
+    font-size:   300%;
   }
 
   &__tennis {
     grid-column: 1/ span 2;
-    grid-row: 3;
-    color: $blau;
-    text-align: right;
-    font-size: 300%;
+    grid-row:    3;
+    color:       $blau;
+    text-align:  right;
+    font-size:   300%;
   }
 
   &__text {
-    grid-row: 5;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
+    grid-row:        5;
+    height:          30rem;
+    display:         flex;
+    flex-direction:  column;
     justify-content: center;
-    position: relative;
+    position:        relative;
 
     &__p {
       text-align: justify;
-      color: $blau;
+      color:      $blau;
     }
 
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      bottom: 0;
+      top:      0;
+      left:     10%;
+      right:    10%;
+      bottom:   0;
       background-color: $salmo;
-      z-index: -1;
+      z-index:  -1;
     }
   }
 
   &__join {
-    grid-row: 5;
-    display: flex;
-    align-items: center;
+    grid-row:        5;
+    display:         flex;
+    align-items:     center;
     justify-content: center;
 
     &__a {
-      text-transform: uppercase;
-      font-weight: bolder;
+      text-transform:  uppercase;
+      font-weight:     bolder;
       text-decoration: none;
-      transform: rotate(90deg);
-      color: $blau;
-      font-size: 2rem;
-      text-align: center;
+      transform:       rotate(90deg);
+      color:           $blau;
+      font-size:       2rem;
+      text-align:      center;
 
       &:hover {
-        color: $salmo;
+        color:            $salmo;
         background-color: $blau;
       }
     }
@@ -276,77 +280,17 @@ h1 {
 
 
 
-// @supports (display: grid) {
-//   .wrap {
-//     display: flex;      
-//     flex-direction: column;
-//     max-width: 80%;
-
-//     &__data {
-//       margin-top: 4rem;
-//       margin-left: 55rem;
-//       border-top: 1.5rem solid $blau;
-//       border-bottom: 2.5rem solid $blau;
-
-//       &__p {
-//         font-size: 2.5rem;
-//       }  
-//     }
-
-//     &__text {
-
-//       &::before {
-//         top: 0;
-//         left: 40%;
-//         right: 40%;
-//         padding-right: 100%;
-//       }
-
-//       &__p {
-//         font-size: 120%;
-//         margin-left: 30%;
-//         margin-right: 30%;
-//       }
-//     }
-
-//     &__welcome {
-//       margin: 0;
-//       text-align: left;
-
-//     }
-
-//     &__tennis {
-//       margin: 0;
-//       text-align: left;      
-
-//     }
-
-//     &__bola {
-//       display: flex;
-//       align-items: left;
-//     }
-
-//     &__join {
-//       justify-content: flex-start;      
-
-//       &__a {
-//         font-size: 3rem;
-//       }
-//     }
-//   }
-// }
-
 /*---------------------------------*\
     #PARTICIPANTS GENERIC
 \*---------------------------------*/
 .participants {
-  margin: 1.5rem;
-  display: flex;
+  margin:         1.5rem;
+  display:        flex;
   flex-direction: column;
 
   &__h1 {
     text-align: center;
-    font-size: 180%;
+    font-size:  180%;
   }
 
   &__text {
@@ -357,13 +301,13 @@ h1 {
   &__people {
 
     &__each {
-      margin-top: 2rem;
-      display: flex;
+      margin-top:     2rem;
+      display:        flex;
       flex-direction: column;
-      align-items: center;
+      align-items:    center;
 
       &__img {
-        width: 85%;
+        width:  85%;
         margin: 1.2rem;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
       }
@@ -371,7 +315,7 @@ h1 {
       &__dades {
 
         &__h2 {
-          color: $salmo;
+          color:      $salmo;
           text-align: center;
         }
 
@@ -380,13 +324,13 @@ h1 {
 
           &__li {
             line-height: 1.5rem;
-            text-align: left;
+            text-align:  left;
             margin-left: 1rem;
-            color: $blau;
+            color:       $blau;
 
             &:last-child {
-              text-align: center;
-              font-style: italic;
+              text-align:  center;
+              font-style:  italic;
               padding-top: 0.7rem;
             }
 
@@ -396,7 +340,7 @@ h1 {
 
             &__span {
               text-decoration: underline;
-              font-weight: bold;
+              font-weight:     bold;
             }
           }
         }
@@ -410,8 +354,8 @@ h1 {
 \*---------------------------------*/
 
 .article {
-  display: flex;
-  align-items: center;
+  display:        flex;
+  align-items:    center;
   flex-direction: column;
 
   & :where(.article__text, .article__segon) span {
@@ -419,15 +363,15 @@ h1 {
   }
 
   &__portada {
-    width: 100%;
+    width:         100%;
     margin-bottom: 2rem;
   }
 
   &__inicial {
-    display: flex;
+    display:        flex;
     flex-direction: column;
-    align-items: center;
-    width: 80%;
+    align-items:    center;
+    width:          80%;
 
     &__blockquote {
       background-color: $grisfosc;
@@ -442,18 +386,18 @@ h1 {
 
     &__p {
       text-align: justify;
-      color: $blau;
+      color:      $blau;
     }
   }
 
   &__llista {
-    width: 80%;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    width:          80%;
+    margin-bottom:  2rem;
+    margin-top:     2rem;
     padding-bottom: 1.2rem;
 
     &:has(ol > li) {
-      border-top: 0.3rem solid $blau;
+      border-top:    0.3rem solid $blau;
       border-bottom: 0.3rem solid $blau;
     }
 
@@ -461,9 +405,9 @@ h1 {
       list-style-position: inside;
 
       &__li {
-        margin-left: 2rem;
+        margin-left:  2rem;
         margin-right: 2rem;
-        text-align: justify;
+        text-align:   justify;
 
         &::before {
           color: $blau;
@@ -471,10 +415,10 @@ h1 {
         }
 
         &__titol {
-          font-weight: bold;
-          margin-top: 0.8rem;
+          font-weight:   bold;
+          margin-top:    0.8rem;
           margin-bottom: 0.5rem;
-          color: $salmo;
+          color:         $salmo;
         }
 
         &__p {
@@ -487,7 +431,7 @@ h1 {
 
   &__segon {
     align-items: center;
-    width: 80%;
+    width:       80%;
 
     & :is(h2, p) {
       color: $blau;
@@ -498,23 +442,23 @@ h1 {
     }
 
     &__p {
-      text-align: justify;
+      text-align:     justify;
       padding-bottom: 1.5rem;
 
     }
   }
 
   &__img {
-    width: 80%;
+    width:         80%;
     margin-bottom: 1.5rem;
 
   }
 
   &__text {
-    color: $blau;
-    text-align: justify;
+    color:          $blau;
+    text-align:     justify;
     padding-bottom: 1.5rem;
-    width: 80%;
+    width:          80%;
   }
 }
 
@@ -523,34 +467,34 @@ h1 {
 \*---------------------------------*/
 
 .act {
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  align-items: center;
+  align-items:    center;
 
   &__carousel {
-    width: 90%;
-    margin-top: 1rem;
+    width:         90%;
+    margin-top:    1rem;
     margin-bottom: 1rem;
   }
 
   &__coaches {
     align-items: center;
-    width: 80%;
+    width:       80%;
 
     &__h2 {
-      color: $blau;
+      color:      $blau;
       text-align: center;
     }
 
     &__p {
-      color: $blau;
+      color:      $blau;
       text-align: justify;
     }
 
     &__cards {
-      display: flex;
+      display:        flex;
       flex-direction: column;
-      align-items: center;
+      align-items:    center;
 
       &__card {
         margin-bottom: 1rem;
@@ -569,12 +513,11 @@ h1 {
 
   &__game {
     align-items: center;
-    width: 80%;
-    margin-top: 2rem;
-
+    width:       80%;
+    margin-top:  2rem;
 
     &__h2 {
-      color: $blau;
+      color:      $blau;
       text-align: center;
     }
 
@@ -583,35 +526,36 @@ h1 {
       margin-bottom: 0.5rem;
 
       &__p {
-        color: $blau;
+        color:      $blau;
         text-align: justify;
+      }
+      &__button{
+        color:            $gris;
+        background-color: $blau;
+        border:           none;
       }
     }
   }
 
   &__accordion {
-    margin-top: 2rem;
+    margin-top:    2rem;
     margin-bottom: 2rem;
-    width: 80%;
-    align-items: center;
+    width:         80%;
+    align-items:   center;
 
     &__h2 {
-      color: $blau;
+      color:      $blau;
       text-align: center;
     }
+
+    &__item{
+      &__div{
+        &__body{
+          color: $blau;
+        }
+      }
+    }
   }
-
-}
-
-.accordion-body {
-  color: $blau;
-}
-
-
-.btn {
-  color: #f7f7f7;
-  background-color: $blau;
-  border: none;
 }
 
 
@@ -627,10 +571,8 @@ h1 {
   \*---------------------------------*/
   .footer {
 
-
-
     &__network {
-      padding-top: 2rem;
+      padding-top:    2rem;
       padding-bottom: 2rem;
     }
   }
@@ -654,15 +596,12 @@ h1 {
       &__ul {
         flex-direction: row;
 
-
         &__li {
-          font-size: 1.2rem;
+          font-size:    1.2rem;
           margin-right: 0.2rem;
-
 
           &::before {
             content: " | ";
-
           }
 
           &:first-child::before {
@@ -684,15 +623,12 @@ h1 {
       &__ul {
         flex-direction: row;
 
-
         &__li {
-          font-size: 1.2rem;
+          font-size:    1.2rem;
           margin-right: 0.2rem;
-
 
           &::before {
             content: " | ";
-
           }
 
           &:first-child::before {
@@ -708,10 +644,11 @@ h1 {
   }
 
   /*---------------------------------*\
-    #WRAP TABLET
+    #POSTER TABLET
   \*---------------------------------*/
 
   .wrap {
+
     &__data {
 
       &__p {
@@ -720,89 +657,29 @@ h1 {
     }
 
     &__welcome {
-      font-size: 3.5rem;
+      font-size:    3.5rem;
       margin-right: 10rem;
     }
 
     &__tennis {
-      font-size: 5rem;
+      font-size:  5rem;
       text-align: center;
     }
 
     &__text {
 
       &::before {
-        top: 0;
-        left: 20%;
+        top:   0;
+        left:  20%;
         right: 20%;
       }
 
       &__p {
-        font-size: 1.2rem;
+        font-size:   1.2rem;
         margin-left: 2rem;
       }
     }
   }
-
-  // @supports (display: grid) {
-  //   .wrap {
-  //     display: flex;      
-  //     flex-direction: column;
-  //     max-width: 80%;
-
-  //     &__data {
-  //       margin-top: 4rem;
-  //       margin-left: 55rem;
-  //       border-top: 1.5rem solid $blau;
-  //       border-bottom: 2.5rem solid $blau;
-
-  //       &__p {
-  //         font-size: 2.5rem;
-  //       }  
-  //     }
-
-  //     &__text {
-
-  //       &::before {
-  //         top: 0;
-  //         left: 40%;
-  //         right: 40%;
-  //         padding-right: 100%;
-  //       }
-
-  //       &__p {
-  //         font-size: 120%;
-  //         margin-left: 30%;
-  //         margin-right: 30%;
-  //       }
-  //     }
-
-  //     &__welcome {
-  //       margin: 0;
-  //       text-align: left;
-
-  //     }
-
-  //     &__tennis {
-  //       margin: 0;
-  //       text-align: left;      
-
-  //     }
-
-  //     &__bola {
-  //       display: flex;
-  //       align-items: left;
-  //     }
-
-  //     &__join {
-  //       justify-content: flex-start;      
-
-  //       &__a {
-  //         font-size: 3rem;
-  //       }
-  //     }
-  //   }
-  // }
 
   /*---------------------------------*\
     #PARTICIPANTS TABLET
@@ -814,15 +691,16 @@ h1 {
     }
 
     &__text {
-      margin-left: 3rem;
+      margin-left:  3rem;
       margin-right: 3rem;
     }
 
     &__people {
+
       &__each {
         flex-direction: row;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-left:    3rem;
+        margin-right:   3rem;
 
         &__img {
           width: 20rem;
@@ -837,7 +715,6 @@ h1 {
               &:last-child {
                 text-align: left;
                 margin-top: 1rem;
-
               }
             }
           }
@@ -847,14 +724,14 @@ h1 {
   }
 
   /*---------------------------------*\
-    #ACTIVITATS DESKTOP
+    #ACTIVITATS TABLET
   \*---------------------------------*/
   .act {
     &__coaches {
       &__cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display:         flex;
+        flex-direction:  row;
+        flex-wrap:       wrap;
         justify-content: space-around;
 
         &__card {
@@ -863,7 +740,6 @@ h1 {
       }
     }
   }
-
 }
 
 
@@ -878,27 +754,23 @@ h1 {
   \*---------------------------------*/
 
   .nav {
-    flex-direction: row;
+    flex-direction:  row;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left:    2rem;
+    padding-right:   2rem;
 
     &__pages {
 
       &__ul {
         flex-direction: row;
 
-
-
         &__li {
-          font-size: 1.2rem;
+          font-size:    1.2rem;
           margin-right: 0.2rem;
-          margin-top: 0rem;
-
+          margin-top:   0rem;
 
           &::before {
             content: " | ";
-
           }
 
           &:first-child::before {
@@ -914,21 +786,19 @@ h1 {
   \*---------------------------------*/
 
   .footer {
-    flex-direction: row;
+    flex-direction:  row;
     justify-content: space-between;
-    padding: 2.5rem;
+    padding:         2.5rem;
 
     &__pages {
 
       &__ul {
         flex-direction: row;
 
-
         &__li {
-          font-size: 1.3rem;
+          font-size:    1.3rem;
           margin-right: 0.2rem;
-          margin-top: 0;
-
+          margin-top:   0;
 
           &::before {
             content: " | ";
@@ -946,69 +816,68 @@ h1 {
       &__i {
         margin-left: 1.2rem;
       }
-
     }
   }
 
   /*---------------------------------*\
-    #WRAP DESKTOP
+    #POSTER DESKTOP
   \*---------------------------------*/
   .containerwrap {
-  //   padding: 25rem;
     overflow: hidden;
   }
 
   .wrap {
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 5% 5% 1rem;
-    transform: rotate(-15deg);
+    margin-top:            0;
+    transform:             rotate(-15deg);
+
     &__bola {
 
       &__svg {
-        margin: 0;
+        margin:    0;
         transform: scale(.5);
-      
       }
     }
-      &__welcome {
-    font-size: 300%;
-    text-align: left;
-    grid-column: 1/ span 2;
-    grid-row: 2;
-    margin-left: 2rem;
-  }
 
-  &__tennis {
-    font-size: 400%;
-    text-align: left;
-    grid-column: 1/ span 2;
-    grid-row: 3;
-    // margin-left: 13rem;
-  }
+    &__welcome {
+      font-size:   300%;
+      text-align:  left;
+      grid-column: 1/ span 2;
+      grid-row:    2;
+      margin-left: 2rem;
+    }
+
+    &__tennis {
+      font-size:   400%;
+      text-align:  left;
+      grid-column: 1/ span 2;
+      grid-row:    3;
+
+    }
 
     &__text {
-      grid-row: 3;
+      grid-row:    3;
       grid-column: 2;
-      font-size: 85%;
+      font-size:   85%;
 
       &::before {
-        top: 0;
-        left: 60%;
-        right: 60%;
+        top:           0;
+        left:          60%;
+        right:         60%;
         padding-right: 100%;
       }
 
       &__p {
-        font-size: 120%;
+        font-size:   120%;
         margin-left: 50%;
-        margin-top: 20%;
+        margin-top:  20%;
       }
     }
 
     &__join {
       justify-content: flex-start;
-      grid-row: 3;
-      grid-column: 3;
+      grid-row:        3;
+      grid-column:     3;
 
       &__a {
         font-size: 300%;
@@ -1016,89 +885,7 @@ h1 {
     }
   }
 
-
-
-  // .wrap {
-
-  // transform: rotate(-25deg);
-  // grid-template-columns: 1fr 2fr 2fr;
-  // margin: 0;
-  // width: 30%;
-  // height: 20%;
-  // position: absolute;
-  // top: -10rem;
-  // left: -10rem;
-
-
-
-  // &__data {
-  //   margin-top: 40%;
-  //   margin-left: 55rem;
-  //   border-top: 1.5rem solid $blau;
-  //   border-bottom: 2.5rem solid $blau;
-  //   transform: rotate(90deg);
-
-  //   &__p {
-  //     font-size: 250%;
-  //   }
-
-  // }
-
-  // &__text {
-  //   grid-row: 4;
-  //   grid-column: 2;
-  //   font-size: 90%;
-
-  //   &::before {
-  //     top: 0;
-  //     left: 40%;
-  //     right: 40%;
-  //     padding-right: 100%;
-  //   }
-
-  //   &__p {
-  //     font-size: 120%;
-  //     margin-left: 30%;
-  //     margin-right: 30%;
-  //   }
-  // }
-
-  // &__welcome {
-  //   font-size: 300%;
-  //   text-align: left;
-  //   grid-column: 1/ span 2;
-  //   grid-row: 3;
-  //   margin-left: 2rem;
-  // }
-
-  // &__tennis {
-  //   font-size: 400%;
-  //   text-align: left;
-  //   grid-column: 1/ span 2;
-  //   grid-row: 4;
-  //   // margin-left: 13rem;
-  // }
-
-  // &__bola {
-  //   grid-column: 1/ span 2;
-  //   grid-row: 4;
-  //   display: flex;
-  //   align-items: left;
-  // }
-
-  // &__join {
-  //   justify-content: flex-start;
-  //   grid-row: 4;
-
-  //   &__a {
-  //     font-size: 300%;
-  //   }
-  // }
-  // }
-
-
-
-  /*--------------- ------------------*\
+  /*---------------------------------*\
     #PARTICIPANTS DESKTOP
   \*---------------------------------*/
 
@@ -1107,25 +894,25 @@ h1 {
 
     &__h1 {
       margin-top: 4rem;
-      font-size: 300%;
+      font-size:  300%;
     }
 
     &__text {
-      margin-left: 20%;
+      margin-left:  20%;
       margin-right: 20%;
-      font-size: 1.4rem;
+      font-size:    1.4rem;
     }
 
     &__people {
-      display: flex;
-      flex-wrap: wrap;
+      display:         flex;
+      flex-wrap:       wrap;
       justify-content: space-around;
 
       &__each {
         flex-direction: column;
-        width: 25%;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        width:          25%;
+        margin-left:    3rem;
+        margin-right:   3rem;
 
         &__img {
           width: 22rem;
@@ -1137,12 +924,11 @@ h1 {
             margin-top: 1.2rem;
 
             &__li {
-              font-size: 125%;
+              font-size:  125%;
               margin-top: 0.5rem;
 
               &:last-child {
                 margin-top: 1rem;
-
               }
             }
           }
@@ -1151,11 +937,9 @@ h1 {
     }
   }
 
-  /*--------------- ------------------*\
+  /*---------------------------------*\
     #ARTICLE DESKTOP
   \*---------------------------------*/
-
-
 
   .article {
     line-height: 1.5rem;
@@ -1165,8 +949,8 @@ h1 {
       flex-direction: row;
 
       &__blockquote {
-        text-align: justify;
-        font-size: 1.2rem;
+        text-align:   justify;
+        font-size:    1.2rem;
         margin-right: 2rem;
       }
     }
@@ -1174,10 +958,9 @@ h1 {
     &__img {
       width: 50%;
     }
-
   }
 
-  /*--------------- ------------------*\
+  /*---------------------------------*\
     #ACTIVITATS DESKTOP
   \*---------------------------------*/
 
@@ -1189,12 +972,11 @@ h1 {
     width: 70%;
   }
 
-
   .act {
     &__coaches {
       &__cards {
         display: flex;
-        flex-direction: row;
+        flex-direction:  row;
         justify-content: space-evenly;
 
         &__card {
@@ -1203,6 +985,4 @@ h1 {
       }
     }
   }
-
-
 }
