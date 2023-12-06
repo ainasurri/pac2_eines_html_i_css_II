@@ -67,7 +67,7 @@ h1 {
   display:        flex;
   flex-direction: column;
   align-items:    center;
-  box-shadow:     0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow:     0px 4px 8px rgba(0, 0, 0, 20%);
 
   &__logo {
     display:        flex;
@@ -124,7 +124,7 @@ h1 {
   display:        flex;
   flex-direction: column;
   align-items:    center;
-  box-shadow:     0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow:     0px 4px 8px rgba(0, 0, 0, 20%);
 
   &__logo {
     display:         flex;
@@ -232,7 +232,7 @@ h1 {
 
   &__text {
     grid-row:        5;
-    height:          30rem;
+    height:          32rem;
     display:         flex;
     flex-direction:  column;
     justify-content: center;
@@ -246,10 +246,7 @@ h1 {
     &::before {
       content: '';
       position: absolute;
-      top:      0;
-      left:     10%;
-      right:    10%;
-      bottom:   0;
+      inset: 0 10%;
       background-color: $salmo;
       z-index:  -1;
     }
@@ -277,7 +274,6 @@ h1 {
     }
   }
 }
-
 
 
 /*---------------------------------*\
@@ -309,7 +305,7 @@ h1 {
       &__img {
         width:  85%;
         margin: 1.2rem;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 80%);
       }
 
       &__dades {
@@ -352,13 +348,34 @@ h1 {
 /*---------------------------------*\
     #ARTICLE GENERIC
 \*---------------------------------*/
+@layer fontbasic, fontespecial;
+
+@layer fontespecial{
+  .article{
+    &__inicial {
+      &__blockquote {
+        font-family: Roboto, sans-serif;
+      }
+    }    
+  }
+}
+
+@layer fontbasic{
+  .article{
+    &__inicial {
+      &__blockquote {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    }    
+  }  
+} 
 
 .article {
   display:        flex;
   align-items:    center;
   flex-direction: column;
 
-  & :where(.article__text, .article__segon) span {
+  :where(.article__text, .article__segon) span {
     font-style: italic;
   }
 
@@ -375,13 +392,14 @@ h1 {
 
     &__blockquote {
       background-color: darken($gris, 10);
-      font-size: 1.2rem;
-      font-style: italic;
-      text-align: center;
-      width: 80%;
+      font-size:     1.2rem;
+      font-style:    italic;
+      text-align:    center;
+      width:         80%;
       margin-bottom: 2rem;
-      padding: 1rem;
-      color: $blau;
+      padding:       1rem;
+      color:         $blau;
+      font-family: Roboto, sans-serif;
     }
 
     &__p {
@@ -402,8 +420,7 @@ h1 {
     }
 
     &__ol {
-      list-style-position: inside;
-
+      
       &__li {
         margin-left:  2rem;
         margin-right: 2rem;
@@ -411,7 +428,6 @@ h1 {
 
         &::before {
           color: $blau;
-
         }
 
         &__titol {
@@ -433,7 +449,7 @@ h1 {
     align-items: center;
     width:       80%;
 
-    & :is(h2, p) {
+    :is(h2, p) {
       color: $blau;
     }
 
@@ -482,12 +498,12 @@ h1 {
     width:       80%;
 
     &__h2 {
-      color:     hwb(244 2% 61%);
+      color:     hwb(244deg 2% 61%);
       text-align: center;
     }
 
     &__p {
-      color:      hwb(244 2% 61%);
+      color:      hwb(244deg 2% 61%);
       text-align: justify;
     }
 
@@ -500,11 +516,11 @@ h1 {
         margin-bottom: 5dvw;
 
         &__title {
-          color: hwb(9 38% 0%);
+          color: hwb(9deg 38% 0%);
         }
 
         &__text {
-          color: hwb(244 2% 61%);
+          color: hwb(244deg 2% 61%);
         }
 
       }
@@ -517,22 +533,22 @@ h1 {
     margin-top:  8dvw;
 
     &__h2 {
-      color:      hwb(244 2% 61%);
+      color:      hwb(244deg 2% 61%);
       text-align: center;
       margin-bottom: 3dvw;
     }
 
     &__questions {      
       margin-bottom: 4dvw;
-      border-bottom: 0.2dvw solid hwb(9 38% 0%);
+      border-bottom: 0.2dvw solid hwb(9deg 38% 0%);
 
       &__p {
-        color:      hwb(244 2% 61%);
+        color:      hwb(244deg 2% 61%);
         text-align: justify;
       }
       &__button{
         color:            hwb(0deg 99% 2%);;
-        background-color: hwb(244 2% 61%);
+        background-color: hwb(244deg 2% 61%);
         border:           none;
       }
     }
@@ -545,7 +561,7 @@ h1 {
     align-items:   center;
 
     &__h2 {
-      color:      hwb(244 2% 61%);
+      color:      hwb(244deg 2% 61%);
       text-align: center;
       margin-bottom: 3dvw;
     }
@@ -553,7 +569,7 @@ h1 {
     &__item{
       &__div{
         &__body{
-          color: hwb(244 2% 61%);
+          color: hwb(244deg 2% 61%);
         }
       }
     }
@@ -731,9 +747,7 @@ h1 {
   .act {
     &__coaches {
       &__cards {
-        display:         flex;
-        flex-direction:  row;
-        flex-wrap:       wrap;
+        flex-flow: row wrap;
         justify-content: space-around;
 
         &__card {
@@ -828,6 +842,21 @@ h1 {
     overflow: hidden;
   }
 
+ @layer invers, normal;
+
+  @layer invers{
+    .wrap{
+    filter: invert(1);
+    }
+  }
+
+  @layer normal{
+    .wrap{
+      filter: invert(0);
+    }
+  }
+ 
+ 
   .wrap {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top:            0;
@@ -988,7 +1017,7 @@ h1 {
     }
     &__game{
       &__questions{
-        border-bottom: 0.1dvw solid hwb(9 38% 0%);
+        border-bottom: 0.1dvw solid hwb(9deg 38% 0%);
       }
     }
   }
